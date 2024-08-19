@@ -1,0 +1,90 @@
+version: 2
+
+sources:
+  - name: tpch_samples
+    description: This is a replica of the Postgres database used by our app
+    database: samples
+    schema: tpch
+    tables:
+      - name: lineitem
+        columns:
+          - name: l_orderkey
+            datatype: bigint
+          - name: l_partkey
+            datatype: bigint
+          - name: l_suppkey
+            datatype: bigint
+          - name: l_linenumber
+            datatype: int
+          - name: l_quantity
+            datatype: decimal(18,2)
+          - name: l_extendedprice
+            datatype: decimal(18,2)
+          - name: l_discount
+            datatype: decimal(18,2)
+          - name: l_tax
+            datatype: decimal(18,2)
+          - name: l_returnflag
+            datatype: string
+          - name: l_linestatus
+            datatype: string
+          - name: l_shipdate
+            datatype: date
+          - name: l_commitdate
+            datatype: date
+          - name: l_receiptdate
+            datatype: date
+          - name: l_shipinstruct
+            datatype: string
+          - name: l_shipmode
+            datatype: string
+          - name: l_comment
+            datatype: string
+      - name: orders
+        columns:
+          - name: o_orderkey
+            datatype: bigint
+          - name: o_custkey
+            datatype: bigint
+          - name: o_orderstatus
+            datatype: string
+          - name: o_totalprice
+            datatype: decimal(18,2)
+          - name: o_orderdate
+            datatype: date
+          - name: o_orderpriority
+            datatype: string
+          - name: o_clerk
+            datatype: string
+          - name: o_shippriority
+            datatype: int
+          - name: o_comment
+            datatype: string
+      - name: customer
+        columns:
+          - name: c_custkey
+            datatype: bigint
+          - name: c_name
+            datatype: string
+          - name: c_address
+            datatype: string
+          - name: c_nationkey
+            datatype: bigint
+          - name: c_phone
+            datatype: string
+          - name: c_acctbal
+            datatype: decimal(18,2)
+          - name: c_mktsegment
+            datatype: string
+          - name: c_comment
+            datatype: string
+      - name: nation
+        columns:
+          - name: n_nationkey
+            datatype: bigint
+          - name: n_name
+            datatype: string
+          - name: n_regionkey
+            datatype: bigint
+          - name: n_comment
+            datatype: string
