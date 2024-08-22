@@ -88,3 +88,59 @@ sources:
             data_type: bigint
           - name: n_comment
             data_type: string
+      - name: partsupp
+        columns:
+          - name: ps_partkey
+            data_type: bigint
+          - name: ps_suppkey
+            data_type: bigint
+          - name: ps_availqty
+            data_type: int
+          - name: ps_supplycost
+            data_type: decimal(18,2)
+          - name: ps_comment
+            data_type: string
+      - name: part
+        columns:
+          - name: p_partkey
+            data_type: bigint
+          - name: p_name
+            data_type: string
+          - name: p_mfgr
+            data_type: string
+          - name: p_brand
+            data_type: string
+          - name: p_type
+            data_type: string
+          - name: p_size
+            data_type: int
+          - name: p_container
+            data_type: string
+          - name: p_retailprice
+            data_type: decimal(18,2)
+          - name: p_comment
+            data_type: string
+      - name: supplier
+        columns:
+          - name: s_suppkey
+            data_type: bigint
+          - name: s_name
+            data_type: string
+          - name: s_address
+            data_type: string
+          - name: s_nationkey
+            data_type: bigint
+          - name: s_phone
+            data_type: string
+          - name: s_acctbal
+            data_type: decimal(18,2)
+          - name: s_comment
+            data_type: string
+      - name: region
+        columns:
+          - name: r_regionkey
+            data_type: bigint
+          - name: r_name
+            data_type: string
+          - name: r_comment
+            data_type: string
